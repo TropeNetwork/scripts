@@ -9,7 +9,7 @@
 // | Authors: Carsten Bleek <carsten@bleek.de>                            |
 // +----------------------------------------------------------------------+
 //
-// $Id: emailClient.php,v 1.3 2003/03/13 08:33:41 cbleek Exp $
+// $Id: emailClient.php,v 1.4 2003/03/13 11:26:18 cbleek Exp $
 //
 
 /*
@@ -21,7 +21,7 @@ You file should be executed by procmail
 */
 
 # include the email server class
-require_once '../prepend.inc';
+require_once dirname(__FILE__).'/../prepend.inc';
 require_once 'SOAP/Server/Email.php';
 require_once OPENHR_LIB."/Job.php";
 $server = new SOAP_Server_Email;
@@ -40,6 +40,20 @@ fclose($fin);
 
 $response = $server->client($email);
 
-var_dump($response);
+if (!PEAR::isError($response)){ 
+    $job    = &Job::singleton($response->key);
+    switch($response->action){
+    case JOB_STATUS_ONLINE_REQUEST:
+        $job->_updateStatus( JOB_STATUS_ONLINE ); # murks
+        break;
+    case JOB_STATUS_OFFLINE_REQUEST:
+        $job->_updateStatus( JOB_STATUS_OFFLINE ); # murks
+        break;
+    default:
+        trigger_error("unknown action $response->action");
+    }
+}else{
+    trigger_error("an error occured while reading the SOAP response");
+}
 
 ?>

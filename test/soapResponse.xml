@@ -1,14 +1,14 @@
-From carsten@acorn.de  Wed Mar 12 17:50:47 2003
+From cbleek@router.local  Thu Mar 13 09:57:31 2003
 Received: from localhost (localhost [127.0.0.1])
-	by mail.acorn.de  with ESMTP id h2CGol030341
-	for <carsten@acorn.de>; Wed, 12 Mar 2003 17:50:47 +0100
-Date: Wed, 12 Mar 2003 17:50:47 +0100
-From: carsten@acorn.de
+	by router.local (8.12.2/8.12.2/SuSE Linux 0.6) with ESMTP id h2D8vROJ024881
+	for <cbleek@router.local>; Thu, 13 Mar 2003 09:57:30 +0100
+Date: Thu, 13 Mar 2003 09:57:29 +0100
+From: cbleek@router.local
 X-Mailer: PEAR-SOAP 0.7.1
 MIME-Version: 1.0
-Message-ID: 6c6f264abb4ab1e1fcdc0f840030c247.soap@127.0.0.1
-To: carsten@acorn.de
-In-Reply-To: 54ca9b7b323fb4823fe8d25b9299691a.soap@127.0.0.1
+Message-ID: 224ac4058056ac9688ba099f3b3ab185.soap@127.0.0.1
+To: cbleek@router.local
+In-Reply-To: 94f4ff31086a7f4967e729ff77a25cb6.soap@127.0.0.1
 Content-Disposition: inline
 Content-Type: text/xml; charset="UTF-8"
 Content-Transfer-Encoding: base64
@@ -21,7 +21,9 @@ bWxuczp4c2k9Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvWE1MU2NoZW1hLWluc3RhbmNlIg0KIHht
 bG5zOlNPQVAtRU5DPSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VuY29kaW5nLyIN
 CiB4bWxuczpuczQ9InVybjpTT0FQX2pvYiINCiBTT0FQLUVOVjplbmNvZGluZ1N0eWxlPSJodHRw
 Oi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VuY29kaW5nLyI+DQo8U09BUC1FTlY6Qm9keT4N
-Cg0KPG5zNDphY3RpdmF0ZVJlc3BvbnNlPg0KPHJldHVybiB4c2k6dHlwZT0ieHNkOnN0cmluZyI+
-SU5TRVJUIDE8L3JldHVybj48L25zNDphY3RpdmF0ZVJlc3BvbnNlPg0KPC9TT0FQLUVOVjpCb2R5
-Pg0KPC9TT0FQLUVOVjpFbnZlbG9wZT4NCg==
+Cg0KPG5zNDphY3RpdmF0ZVJlc3BvbnNlPg0KPHJldHVybj4NCjxrZXkgeHNpOnR5cGU9InhzZDpz
+dHJpbmciPjE8L2tleT4NCjxhY3Rpb24geHNpOnR5cGU9InhzZDpzdHJpbmciPmFjdGl2YXRlPC9h
+Y3Rpb24+DQo8c3RhdHVzIHhzaTp0eXBlPSJ4c2Q6aW50Ij4wPC9zdGF0dXM+PC9yZXR1cm4+PC9u
+czQ6YWN0aXZhdGVSZXNwb25zZT4NCjwvU09BUC1FTlY6Qm9keT4NCjwvU09BUC1FTlY6RW52ZWxv
+cGU+DQo=
 

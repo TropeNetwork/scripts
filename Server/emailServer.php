@@ -1,6 +1,6 @@
 <?php
 //
-// $Id: emailServer.php,v 1.2 2003/03/13 07:46:35 cbleek Exp $
+// $Id: emailServer.php,v 1.3 2003/03/13 11:26:29 cbleek Exp $
 //
 
 /*
@@ -10,7 +10,7 @@ You can use this from qmail by creating a .qmail-soaptest file with:
     | /usr/bin/php /path/to/email_server.php
 */
 
-require_once "../prepend.inc";
+require_once dirname(__FILE__)."/../prepend.inc";
 require_once "/home/carsten/public_html/jobSearch/lib/SearchIndex.php";
 
 # include the email server class
@@ -30,7 +30,7 @@ if (!$fin) exit(0);
 
 $email = '';
 while (!feof($fin) && $data = fread($fin, 8096)) {
-  $email .= $data;
+    $email .= $data;
 }
 
 fclose($fin);
