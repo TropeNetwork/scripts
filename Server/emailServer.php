@@ -16,7 +16,7 @@
 // | Authors: Shane Caraveo <Shane@Caraveo.com>   Port to PEAR and more   |
 // +----------------------------------------------------------------------+
 //
-// $Id: emailServer.php,v 1.1 2003/03/12 18:21:41 cbleek Exp $
+// $Id: emailServer.php,v 1.1.1.1 2003/03/12 18:21:41 cbleek Exp $
 //
 
 /*
