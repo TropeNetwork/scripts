@@ -5,25 +5,31 @@
 // +----------------------------------------------------------------------+
 // | Copyright (c) 2003 Open HR Group                                     |
 // +----------------------------------------------------------------------+
-// +----------------------------------------------------------------------+
 // | Authors: Carsten Bleek <carsten@bleek.de>                            |
 // +----------------------------------------------------------------------+
 //
-// $Id: emailClient.php,v 1.7 2003/03/14 16:27:38 cbleek Exp $
+// $Id: processEmailResponse.php,v 1.1 2003/03/27 12:36:29 cbleek Exp $
 //
 
-/*
-This reads a message from stdin, and calls the soap server defined
-
-You file should be executed by procmail
-
-    | /usr/bin/php Client/emailServer.php
+/**
+* processes the SOAP response of the jobServer send after processing
+* the request to activate/deactivate a jobad. This script is executed 
+* via procmail. 
+* 
+* Call this via:
+* 
+* cat mail.txt | /usr/bin/php processEmailResponse .php
+*
+* @package  jobAdmin
+* @author   Carsten Bleek <carsten@bleek.de>
+* @revision $Revision: 1.1 $ 
 */
 
 # include the email server class
-require_once dirname(__FILE__).'/../prepend.inc';
-require_once 'SOAP/Server/Email.php';
+require_once dirname(__FILE__).'/../../prepend.inc';
 require_once OPENHR_LIB."/Job.php";
+require_once 'SOAP/Server/Email.php';
+
 $server = new SOAP_Server_Email;
 
 # read stdin
