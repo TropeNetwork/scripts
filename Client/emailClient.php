@@ -3,32 +3,27 @@
 // +----------------------------------------------------------------------+
 // | PHP Version 4                                                        |
 // +----------------------------------------------------------------------+
-// | Copyright (c) 1997-2003 The PHP Group                                |
+// | Copyright (c) 2003 Open HR Group                                     |
 // +----------------------------------------------------------------------+
-// | This source file is subject to version 2.02 of the PHP license,      |
-// | that is bundled with this package in the file LICENSE, and is        |
-// | available at through the world-wide-web at                           |
-// | http://www.php.net/license/2_02.txt.                                 |
-// | If you did not receive a copy of the PHP license and are unable to   |
-// | obtain it through the world-wide-web, please send a note to          |
-// | license@php.net so we can mail you a copy immediately.               |
 // +----------------------------------------------------------------------+
-// | Authors: Shane Caraveo <Shane@Caraveo.com>   Port to PEAR and more   |
+// | Authors: Carsten Bleek <carsten@bleek.de>                            |
 // +----------------------------------------------------------------------+
 //
-// $Id: emailClient.php,v 1.1 2003/03/12 18:21:41 cbleek Exp $
+// $Id: emailClient.php,v 1.2 2003/03/13 07:46:26 cbleek Exp $
 //
 
 /*
 This reads a message from stdin, and calls the soap server defined
 
-You can use this from qmail by creating a .qmail-soaptest file with:
-    | /usr/bin/php /path/to/email_server.php
+You file should be executed by procmail
+
+    | /usr/bin/php Client/emailServer.php
 */
 
 # include the email server class
+require_once '../prepend.inc';
 require_once 'SOAP/Server/Email.php';
-
+require_once OPENHR_LIB."/Job.php";
 $server = new SOAP_Server_Email;
 
 # read stdin
