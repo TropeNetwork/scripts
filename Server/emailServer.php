@@ -1,6 +1,6 @@
 <?php
 //
-// $Id: emailServer.php,v 1.3 2003/03/13 11:26:29 cbleek Exp $
+// $Id: emailServer.php,v 1.4 2003/03/13 18:31:41 cbleek Exp $
 //
 
 /*
@@ -22,8 +22,6 @@ $sc     = new SOAP_job();
 
 $server->addObjectMap($sc, 'urn:SOAP_job');
 
-
-
 # read stdin
 $fin = fopen('php://stdin','rb');
 if (!$fin) exit(0);
@@ -36,7 +34,13 @@ while (!feof($fin) && $data = fread($fin, 8096)) {
 fclose($fin);
 
 # doit!
+trigger_error("Server received SOAP request", E_USER_NOTICE);
+# hide show warnings
+$oldErrorLevel=error_reporting( E_ALL & ~(E_WARNING | E_NOTICE));
 $server->service($email);
+error_reporting($oldErrorLevel);
+
+
 
 // Sample SOAP Class. WILL BE COMPLETELY CHANGED
 // Because adding and removing
@@ -49,6 +53,7 @@ class SOAP_job{
      */
     function activate($job_id, $data){
         $index=new SearchIndex;
+
         return $index->insert($job_id, $data);
     }
 

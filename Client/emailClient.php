@@ -9,7 +9,7 @@
 // | Authors: Carsten Bleek <carsten@bleek.de>                            |
 // +----------------------------------------------------------------------+
 //
-// $Id: emailClient.php,v 1.5 2003/03/13 14:20:28 cbleek Exp $
+// $Id: emailClient.php,v 1.6 2003/03/13 18:31:27 cbleek Exp $
 //
 
 /*
@@ -37,8 +37,12 @@ while (!feof($fin) && $data = fread($fin, 8096)) {
 
 fclose($fin);
 
+# hide show warnings
+$oldErrorLevel=error_reporting( E_ALL & ~(E_WARNING | E_NOTICE));
 
+trigger_error("Client received SOAP responce", E_USER_NOTICE);
 $response = $server->client($email);
+error_reporting($oldErrorLevel);
 
 if (!PEAR::isError($response)){ 
     $job    = &Job::singleton($response->key);
@@ -50,7 +54,7 @@ if (!PEAR::isError($response)){
         $job->_updateStatus( JOB_STATUS_OFFLINE ); # murks
         break;
     default:
-        trigger_error("unknown action $response->action");
+        trigger_error("unknown action $response->action", E_USER_ERROR);
     }
 }else{
     trigger_error("an error occured while reading the SOAP response");
