@@ -9,7 +9,7 @@
 // | Authors: Carsten Bleek <carsten@bleek.de>                            |
 // +----------------------------------------------------------------------+
 //
-// $Id: emailClient.php,v 1.4 2003/03/13 11:26:18 cbleek Exp $
+// $Id: emailClient.php,v 1.5 2003/03/13 14:20:28 cbleek Exp $
 //
 
 /*
@@ -43,10 +43,10 @@ $response = $server->client($email);
 if (!PEAR::isError($response)){ 
     $job    = &Job::singleton($response->key);
     switch($response->action){
-    case JOB_STATUS_ONLINE_REQUEST:
+    case JOB_STATUS_ONLINE_REQUESTED:
         $job->_updateStatus( JOB_STATUS_ONLINE ); # murks
         break;
-    case JOB_STATUS_OFFLINE_REQUEST:
+    case JOB_STATUS_OFFLINE_REQUESTED:
         $job->_updateStatus( JOB_STATUS_OFFLINE ); # murks
         break;
     default:
