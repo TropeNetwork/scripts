@@ -9,7 +9,7 @@
 // | Authors: Carsten Bleek <carsten@bleek.de>                            |
 // +----------------------------------------------------------------------+
 //
-// $Id: emailClient.php,v 1.2 2003/03/13 07:46:26 cbleek Exp $
+// $Id: emailClient.php,v 1.3 2003/03/13 08:33:41 cbleek Exp $
 //
 
 /*
@@ -40,6 +40,6 @@ fclose($fin);
 
 $response = $server->client($email);
 
-print_r($response);
+var_dump($response);
 
 ?>
