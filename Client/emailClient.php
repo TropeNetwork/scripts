@@ -9,7 +9,7 @@
 // | Authors: Carsten Bleek <carsten@bleek.de>                            |
 // +----------------------------------------------------------------------+
 //
-// $Id: emailClient.php,v 1.6 2003/03/13 18:31:27 cbleek Exp $
+// $Id: emailClient.php,v 1.7 2003/03/14 16:27:38 cbleek Exp $
 //
 
 /*
@@ -57,7 +57,8 @@ if (!PEAR::isError($response)){
         trigger_error("unknown action $response->action", E_USER_ERROR);
     }
 }else{
-    trigger_error("an error occured while reading the SOAP response");
+    var_dump($response);
+    trigger_error("an error occured while reading the SOAP response. ".$response->getMessage());
 }
 
 ?>
