@@ -1,6 +1,6 @@
 <?php
 //
-// $Id: processEmailRequest.php,v 1.1 2003/03/27 12:36:29 cbleek Exp $
+// $Id: processEmailRequest.php,v 1.2 2003/04/02 07:29:43 cbleek Exp $
 //
 
 /**
@@ -11,13 +11,13 @@
 */
 
 require_once dirname(__FILE__)."/../../prepend.inc";
-require_once "/home/carsten/public_html/jobSearch/lib/Application/Server.php";
+require_once "/home/carsten/public_html/jobAdmin/lib/Application/Collector.php";
 require_once 'SOAP/Server/Email.php';
 
 $server = new SOAP_Server_Email;
 $sc     = new SOAP_jobAdmin();
 
-$server->addObjectMap($sc, 'urn:SOAP_job');
+$server->addObjectMap($sc, 'urn:SOAP_jobAdmin');
 
 # read stdin
 $fin = fopen('php://stdin','rb');
@@ -44,7 +44,13 @@ error_reporting($oldErrorLevel);
 
 class SOAP_jobAdmin{
 
-    function addApplication(){
+    function addApplication($job_id,$key,$data){
+print "$key , $job_id, $data";
+        $app = new Application_Collector($key,$job_id);
+        $app->addApplication($data);
+ 
+        print "ADD APP $key";
+        var_dump($data);
     }
 
 }
