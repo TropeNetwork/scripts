@@ -1,0 +1,27 @@
+From carsten@acorn.de  Wed Mar 12 17:50:47 2003
+Received: from localhost (localhost [127.0.0.1])
+	by mail.acorn.de  with ESMTP id h2CGol030341
+	for <carsten@acorn.de>; Wed, 12 Mar 2003 17:50:47 +0100
+Date: Wed, 12 Mar 2003 17:50:47 +0100
+From: carsten@acorn.de
+X-Mailer: PEAR-SOAP 0.7.1
+MIME-Version: 1.0
+Message-ID: 6c6f264abb4ab1e1fcdc0f840030c247.soap@127.0.0.1
+To: carsten@acorn.de
+In-Reply-To: 54ca9b7b323fb4823fe8d25b9299691a.soap@127.0.0.1
+Content-Disposition: inline
+Content-Type: text/xml; charset="UTF-8"
+Content-Transfer-Encoding: base64
+Subject: SOAP Request activate job: 1
+
+PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCg0KPFNPQVAtRU5WOkVudmVs
+b3BlICB4bWxuczpTT0FQLUVOVj0iaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvc29hcC9lbnZl
+bG9wZS8iDQogeG1sbnM6eHNkPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYSINCiB4
+bWxuczp4c2k9Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvWE1MU2NoZW1hLWluc3RhbmNlIg0KIHht
+bG5zOlNPQVAtRU5DPSJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VuY29kaW5nLyIN
+CiB4bWxuczpuczQ9InVybjpTT0FQX2pvYiINCiBTT0FQLUVOVjplbmNvZGluZ1N0eWxlPSJodHRw
+Oi8vc2NoZW1hcy54bWxzb2FwLm9yZy9zb2FwL2VuY29kaW5nLyI+DQo8U09BUC1FTlY6Qm9keT4N
+Cg0KPG5zNDphY3RpdmF0ZVJlc3BvbnNlPg0KPHJldHVybiB4c2k6dHlwZT0ieHNkOnN0cmluZyI+
+SU5TRVJUIDE8L3JldHVybj48L25zNDphY3RpdmF0ZVJlc3BvbnNlPg0KPC9TT0FQLUVOVjpCb2R5
+Pg0KPC9TT0FQLUVOVjpFbnZlbG9wZT4NCg==
+
