@@ -1,6 +1,6 @@
 <?php
 //
-// $Id: processEmailRequest.php,v 1.1 2003/03/27 12:36:29 cbleek Exp $
+// $Id: processEmailRequest.php,v 1.2 2003/04/07 11:57:07 cbleek Exp $
 //
 
 /*
@@ -11,7 +11,7 @@ You can use this from qmail by creating a .qmail-soaptest file with:
 */
 
 require_once dirname(__FILE__)."/../../prepend.inc";
-require_once "/home/carsten/public_html/jobSearch/lib/SearchIndex.php";
+require_once OPENHR_LIB."/SearchIndex.php";
 
 # include the email server class
 require_once 'SOAP/Server/Email.php';
